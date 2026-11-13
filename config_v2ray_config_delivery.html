@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>کانفیگ وی تو ری</title>
+<style>
+:root{--bg:#07111f;--panel:#101e32;--panel2:#142943;--text:#f3f7ff;--muted:#a8b8ce;--blue:#287bfa;--cyan:#32d7e8;--green:#20c997;--line:#263d59;--gold:#ffc86b}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#174879 0,transparent 38%),radial-gradient(ellipse at 0 45%,#102943 0,transparent 30%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
+header{position:sticky;top:0;background:rgba(5,13,25,.88);border-bottom:1px solid rgba(115,157,204,.2);z-index:20;backdrop-filter:blur(18px)}
+.wrap{max-width:1120px;margin:auto;padding:18px}.nav{display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font-weight:900;font-size:21px;white-space:nowrap}.brand span{color:var(--cyan)}.navlinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+button,.btn{border:0;border-radius:11px;padding:9px 13px;background:linear-gradient(120deg,var(--blue),#5b63f6);color:white;font-weight:bold;cursor:pointer;font-family:inherit;transition:.2s;box-shadow:0 7px 20px #1769db25}button:hover{transform:translateY(-2px);filter:brightness(1.1)}.secondary{background:#172b43;box-shadow:none;border:1px solid #2a4564}.hero{position:relative;overflow:hidden;margin:26px 0 30px;padding:64px 24px;text-align:center;border:1px solid #2a4d70;border-radius:28px;background:linear-gradient(130deg,rgba(20,61,104,.92),rgba(15,31,55,.94) 60%,rgba(20,52,74,.9));box-shadow:0 22px 70px #0004}.hero:before{content:'V2RAY';position:absolute;left:3%;bottom:-42px;font-size:clamp(70px,17vw,170px);font-weight:900;color:#ffffff08;direction:ltr}.hero>*{position:relative}.hero h1{font-size:clamp(29px,5vw,48px);line-height:1.45;margin:15px 0}.hero p,.muted{color:var(--muted);line-height:2}.hero p{max-width:680px;margin:0 auto 22px}.tag{display:inline-block;padding:7px 14px;border-radius:30px;background:#123c54;color:#8cecff;font-size:13px;border:1px solid #27627b}.trust{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}.trust span{font-size:13px;color:#c6d7ec;background:#ffffff0b;border:1px solid #ffffff16;border-radius:30px;padding:8px 13px}
+.section{margin:26px 0}.section h2{font-size:23px;margin:0 0 17px}.section-intro{color:var(--muted);margin-top:-8px;margin-bottom:18px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:12px}.card{background:linear-gradient(155deg,rgba(23,45,72,.96),rgba(13,27,46,.98));border:1px solid var(--line);border-radius:16px;padding:15px;box-shadow:0 8px 24px #0002;max-width:100%}.card h3{margin:9px 0}.grid .card{position:relative;transition:.22s}.grid .card:hover{transform:translateY(-5px);border-color:#3477aa;box-shadow:0 18px 40px #0004}.price{font-size:23px;font-weight:900;color:#72e2f3;margin:14px 0}.price small{font-size:13px;color:var(--muted)}.features{color:var(--muted);line-height:2;min-height:78px}.pill{display:inline-block;border:1px solid #315778;border-radius:20px;padding:5px 11px;color:#a6eaff;font-size:12px;background:#12304a}.grid .card button{width:100%;margin-top:10px}.notice{background:#102d43;border:1px solid #24516e;padding:15px 18px;border-radius:15px;color:#d5f2ff;line-height:2}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{padding:18px;border:1px solid var(--line);border-radius:16px;background:#ffffff06}.step b{color:var(--cyan);display:block;margin-bottom:5px}
+input,select,textarea{width:100%;padding:10px;border-radius:11px;border:1px solid #304965;background:#091727;color:white;font:inherit;margin:7px 0 14px;outline:none}input:focus,select:focus,textarea:focus{border-color:#36a7df;box-shadow:0 0 0 3px #2588ff20}label{font-size:14px;color:#c8d6e8}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.hide{display:none!important}.order{border-bottom:1px solid var(--line);padding:14px 0}.order img{max-width:150px;display:block;margin-top:8px;border-radius:8px}.support-section{margin:34px 0 16px;padding:18px;border:1px solid #2a4b68;border-radius:24px;background:linear-gradient(145deg,#102a42,#0c1b2e)}.support-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}.support-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:#123f57;color:#72e6f4;font-size:23px}.support-head h2{margin:0}.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.foot{border-top:1px solid var(--line);text-align:center;padding:28px 18px;color:var(--muted);font-size:12px;background:#050c16}.foot a{color:#8cb9e7;text-decoration:none}.foot a:hover{color:white}
+@media(max-width:700px){.wrap{padding:13px}.nav{align-items:flex-start;flex-direction:column}.navlinks{width:100%;display:grid;grid-template-columns:repeat(2,1fr)}.navlinks button{padding:10px 8px;font-size:12px}.hero{padding:43px 17px;margin-top:18px;border-radius:20px}.steps{grid-template-columns:1fr}.support-grid{grid-template-columns:1fr}.section h2{font-size:21px}}
+@media(max-width:420px){.row{grid-template-columns:1fr}.brand{font-size:18px}}
+
+/* compact hero */
+.hero{margin:12px 0 18px;padding:20px 14px;border-radius:16px;box-shadow:0 10px 28px #0003}
+.hero h1{font-size:clamp(20px,3.5vw,29px);line-height:1.35;margin:8px 0}
+.hero p{font-size:13px;line-height:1.65;margin:0 auto 12px;max-width:560px}
+.hero .tag{font-size:10px;padding:4px 9px}
+.hero button{padding:8px 12px;font-size:12px;border-radius:9px}
+.trust{gap:6px;margin-top:10px}
+.trust span{font-size:10px;padding:4px 8px}
+.hero:before{font-size:clamp(44px,10vw,95px);bottom:-25px}
+@media(max-width:700px){.hero{padding:17px 12px;margin:10px 0 15px;border-radius:15px}.hero h1{font-size:21px;margin:7px 0}.hero p{font-size:12px;line-height:1.6;margin-bottom:10px}.trust{margin-top:8px;gap:5px}.trust span{font-size:9px;padding:4px 7px}}
+</style></head>
+<body>
+<header><div class="wrap nav"><div class="brand">کانفیگ <span>وی تو ری</span></div><div class="navlinks"><button class="secondary" onclick="show('shop')">فروشگاه</button><button class="secondary" onclick="show('tracking')">پیگیری سفارش</button><button class="secondary" onclick="show('support')">پشتیبانی</button><button onclick="show('cart')">سبد خرید <b id="count">0</b></button></div></div></header>
+<main class="wrap">
+<section id="shop">
+<div class="hero"><span class="tag">اتصال پایدار • خرید سریع • پشتیبانی پاسخ‌گو</span><h1>با خیال راحت، کانفیگ موردنظرت رو بخر</h1><p>پلن مناسب خودت رو انتخاب کن، سفارش رو ثبت کن و وضعیت خرید و دریافت کانفیگ رو از همین سایت دنبال کن.</p><button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">مشاهده پلن‌ها</button><div class="trust"><span>✓ ثبت سفارش آسان</span><span>✓ پیگیری آنلاین</span><span>✓ پشتیبانی مشتریان</span></div></div>
+<div class="section"><h2>پلن‌های فروش</h2><p class="section-intro">یکی از بسته‌های زیر رو انتخاب کن تا به سبد خرید و مرحله پرداخت بری.</p><div class="grid" id="products"></div></div><div class="section"><h2>خرید در سه مرحله</h2><div class="steps"><div class="step"><b>۱. انتخاب پلن</b><span class="muted">حجم و مدت اعتبار مناسب خودت رو انتخاب کن.</span></div><div class="step"><b>۲. ثبت سفارش</b><span class="muted">اطلاعاتت رو وارد کن و رسید پرداخت رو بفرست.</span></div><div class="step"><b>۳. دریافت کانفیگ</b><span class="muted">بعد از تأیید پرداخت، کانفیگ از بخش پیگیری قابل مشاهده است.</span></div></div></div><div class="notice">پرداخت در نسخه آزمایشی به‌صورت کارت‌به‌کارت و ارسال تصویر رسید انجام می‌شود. شماره کارت مقصد را مدیریت در پنل وارد می‌کند.</div>
+</section>
+<section id="cart" class="hide section"><h2>سبد خرید</h2><div id="cartitems"></div><div class="card"><h3>اطلاعات سفارش</h3><label>نام و نام خانوادگی</label><input id="customer" placeholder="نام شما"><label>شماره موبایل</label><input id="phone" placeholder="09xxxxxxxxx" inputmode="tel"><label>توضیحات (اختیاری)</label><textarea id="note" rows="2" placeholder="اگر توضیحی دارید..."></textarea><div class="notice">روش پرداخت: کارت‌به‌کارت<br>شماره کارت مقصد: <b id="cardnumber">شماره کارت توسط مدیریت وارد می‌شود</b><br>به نام: <b id="cardholder">نام صاحب کارت توسط مدیریت وارد می‌شود</b><br>پس از واریز، تصویر رسید را در همین صفحه انتخاب کن.</div><label>تصویر فیش پرداخت</label><input type="file" id="receipt" accept="image/*"><p>مبلغ قابل پرداخت: <b id="total">۰ تومان</b></p><button onclick="checkout()">ثبت سفارش و ارسال رسید</button></div></section>
+
+<section id="done" class="hide section"><div class="card"><p class="muted">سفارش شما ثبت و بعد از بررسی، کانفیگ به شما تحویل داده خواهد شد. از همراهی شما سپاسگزاریم.</p></div></section>
+<section id="tracking" class="hide section"><h2>پیگیری وضعیت سفارش</h2><div class="card"><p class="muted">شماره موبایلی را وارد کن که هنگام ثبت سفارش استفاده کردی.</p><label>شماره موبایل</label><input id="trackphone" placeholder="09xxxxxxxxx" inputmode="tel"><button onclick="trackOrders()">نمایش سفارش‌های من</button><div id="trackingresults"></div></div></section>
+<section id="support" class="support-section hide"><div class="support-head"><div class="support-icon">✉</div><div><h2>پشتیبانی مشتریان</h2><div class="muted">سوالی داری؟ پیام بده تا راهنماییت کنیم.</div></div></div><div class="support-grid"><div><label>نام</label><input id="supportname" placeholder="نام شما"><label>شماره موبایل</label><input id="supportphone" placeholder="09xxxxxxxxx" inputmode="tel"><label>موضوع پیام</label><select id="supporttopic"><option>پیگیری سفارش</option><option>مشکل پرداخت</option><option>دریافت کانفیگ</option><option>سایر موارد</option></select><label>متن پیام</label><textarea id="supportmessage" rows="4" placeholder="پیامت را بنویس..."></textarea><button onclick="sendSupport()">ارسال پیام به پشتیبانی</button></div><div><h3>گفت‌وگوهای من</h3><p class="muted">برای دیدن پاسخ پشتیبانی، شماره موبایلی که پیام را با آن فرستادی وارد کن.</p><label>شماره موبایل</label><input id="supportlookup" placeholder="09xxxxxxxxx" inputmode="tel"><button class="secondary" onclick="loadSupport()">نمایش پیام‌ها</button><div id="supportthread"></div></div></div></section>
+<section id="admin" class="hide section"><h2>پنل مدیریت</h2><div class="card"><label>رمز عبور مدیریت</label><input id="adminpass" type="password" placeholder="رمز عبور را وارد کنید"><button onclick="loginAdmin()">ورود مدیر</button></div><div id="adminarea" class="hide card"><h3>تنظیمات فروشگاه</h3><label>شماره کارت مقصد</label><input id="admincard" placeholder="شماره کارت ۱۶ رقمی" inputmode="numeric"><label>نام و نام خانوادگی صاحب کارت</label><input id="admincardname" placeholder="نام و نام خانوادگی صاحب کارت"><button onclick="saveCard()">ذخیره اطلاعات کارت</button><h3>افزودن پلن جدید</h3><div class="row"><div><label>نام پلن</label><input id="pname" placeholder="مثلاً پلن نامحدود"></div><div><label>قیمت (تومان)</label><input id="pprice" type="number" placeholder="100000"></div><div><label>حجم</label><input id="pvolume" placeholder="۵۰ گیگابایت"></div><div><label>مدت اعتبار</label><input id="pdays" placeholder="۳۰ روز"></div></div><label>توضیحات</label><input id="pdesc" placeholder="توضیح کوتاه پلن"><button id="productSaveBtn" onclick="addProduct()">افزودن پلن</button> <button id="productCancelBtn" class="secondary hide" onclick="cancelProductEdit()">لغو ویرایش</button><h3>مدیریت محصولات</h3><div id="adminproducts"></div><h3>سفارش‌ها</h3><div id="orders"></div><h3>پیام‌های پشتیبانی</h3><div id="supportadmin"></div></div></section>
+</main><div class="foot">© کانفیگ وی تو ری — همراه شما برای خریدی آسان و مطمئن<br><a href="#admin">مدیریت</a></div>
+<script>
+const defaults=[
+ {id:1,name:'پلن اقتصادی',price:80000,volume:'۳۰ گیگابایت',days:'۳۰ روز',desc:'مناسب استفاده روزمره'},
+ {id:2,name:'پلن حرفه‌ای',price:150000,volume:'۷۰ گیگابایت',days:'۳۰ روز',desc:'مناسب استفاده بیشتر'},
+ {id:3,name:'پلن ویژه',price:260000,volume:'۱۵۰ گیگابایت',days:'۶۰ روز',desc:'حجم بیشتر و اعتبار طولانی‌تر'}
+];
+let products=JSON.parse(localStorage.getItem('v2products')||'null')||defaults;
+let cart=JSON.parse(sessionStorage.getItem('v2cart')||'[]');
+const orders=()=>JSON.parse(localStorage.getItem('v2orders')||'[]');
+const fa=n=>Number(n).toLocaleString('fa-IR');
+function saveCart(){sessionStorage.setItem('v2cart',JSON.stringify(cart));document.getElementById('count').textContent=fa(cart.length)}
+function renderProducts(){document.getElementById('products').innerHTML=products.map(p=>`<div class="card"><span class="pill">${p.days}</span><h3>${p.name}</h3><div class="price">${fa(p.price)} <small>تومان</small></div><div class="features">حجم: ${p.volume}<br>${p.desc}<br>تحویل پس از تأیید پرداخت</div><button onclick="add(${p.id})">خرید و رفتن به پرداخت</button></div>`).join('')}
+function add(id){cart.push(id);saveCart();show('cart')}
+function show(id){['shop','cart','done','tracking','support','admin'].forEach(x=>document.getElementById(x).classList.toggle('hide',x!==id));if(id==='cart')renderCart();if(id==='admin'){adminarea.classList.add('hide');adminpass.value='';}window.scrollTo({top:0,behavior:'smooth'});}
+function scrollSupport(){show('support')}
+function renderCart(){let items=cart.map(id=>products.find(p=>p.id===id)).filter(Boolean);document.getElementById('cartitems').innerHTML=items.length?items.map((p,i)=>`<div class="order">${p.name} — ${fa(p.price)} تومان <button class="secondary" onclick="removeItem(${i})">حذف</button></div>`).join(''):'سبد خرید خالی است';document.getElementById('total').textContent=fa(items.reduce((s,p)=>s+p.price,0))+' تومان'}
+function removeItem(i){cart.splice(i,1);saveCart();renderCart()}
+function checkout(){if(!cart.length)return alert('سبد خرید خالی است');if(!customer.value.trim()||!/^09\d{9}$/.test(phone.value.trim()))return alert('نام و شماره موبایل معتبر را وارد کن');if(!receipt.files[0])return alert('لطفاً تصویر فیش پرداخت را انتخاب کن');submitOrder()}
+function submitOrder(){let f=receipt.files[0];if(!f)return alert('لطفاً تصویر فیش را انتخاب کن');let reader=new FileReader();reader.onload=()=>{let list=orders();list.push({id:Date.now(),name:customer.value,phone:phone.value,note:note.value,items:cart.map(id=>products.find(p=>p.id===id)?.name).filter(Boolean),total:cart.reduce((s,id)=>s+(products.find(p=>p.id===id)?.price||0),0),receipt:reader.result,status:'در انتظار بررسی',config:''});localStorage.setItem('v2orders',JSON.stringify(list));cart=[];saveCart();show('done')};reader.readAsDataURL(f)}
+function loginAdmin(){if(adminpass.value!=='admin123')return alert('رمز نمایشی اشتباه است');adminarea.classList.remove('hide');admincard.value=localStorage.getItem('v2card')||'';admincardname.value=localStorage.getItem('v2cardname')||'';renderOrders();renderAdminProducts()}
+function saveCard(){localStorage.setItem('v2card',admincard.value.trim());localStorage.setItem('v2cardname',admincardname.value.trim());document.getElementById('cardnumber').textContent=admincard.value.trim()||'شماره کارت توسط مدیریت وارد می‌شود';document.getElementById('cardholder').textContent=admincardname.value.trim()||'نام صاحب کارت توسط مدیریت وارد می‌شود';alert('اطلاعات کارت ذخیره شد.')}
+let editingProductId=null;
+function persistProducts(){localStorage.setItem('v2products',JSON.stringify(products));renderProducts();renderAdminProducts()}
+function renderAdminProducts(){const box=document.getElementById('adminproducts');if(!box)return;box.innerHTML=products.length?products.map(p=>`<div class="order product-admin-row"><b>${p.name}</b><p>${fa(p.price)} تومان · ${p.volume} · ${p.days}</p><p class="muted">${p.desc||''}</p><button class="secondary" onclick="editProduct(${p.id})">ویرایش</button> <button style="background:#9d3348" onclick="deleteProduct(${p.id})">حذف</button></div>`).join(''):'<p class="muted">هنوز محصولی ثبت نشده است.</p>'}
+function addProduct(){const name=pname.value.trim(),price=Number(pprice.value),volume=pvolume.value.trim(),days=pdays.value.trim(),desc=pdesc.value.trim();if(!name||!price||!volume||!days)return alert('نام، قیمت، حجم و مدت اعتبار را وارد کن');if(editingProductId!==null){const p=products.find(x=>x.id===editingProductId);if(!p)return alert('محصول پیدا نشد؛ دوباره تلاش کن');Object.assign(p,{name,price,volume,days,desc});editingProductId=null;document.getElementById('productSaveBtn').textContent='افزودن پلن';document.getElementById('productCancelBtn').classList.add('hide');persistProducts();clearProductForm();alert('محصول ویرایش شد.')}else{products.push({id:Date.now(),name,price,volume,days,desc});persistProducts();clearProductForm();alert('پلن اضافه شد.')}}
+function clearProductForm(){pname.value=pprice.value=pvolume.value=pdays.value=pdesc.value=''}
+function editProduct(id){const p=products.find(x=>x.id===id);if(!p)return;editingProductId=id;pname.value=p.name;pprice.value=p.price;pvolume.value=p.volume;pdays.value=p.days;pdesc.value=p.desc||'';document.getElementById('productSaveBtn').textContent='ذخیره تغییرات';document.getElementById('productCancelBtn').classList.remove('hide');document.getElementById('pname').scrollIntoView({behavior:'smooth',block:'center'})}
+function cancelProductEdit(){editingProductId=null;clearProductForm();document.getElementById('productSaveBtn').textContent='افزودن پلن';document.getElementById('productCancelBtn').classList.add('hide')}
+function deleteProduct(id){const p=products.find(x=>x.id===id);if(!p)return;if(!confirm(`محصول «${p.name}» حذف شود؟`))return;products=products.filter(x=>x.id!==id);cart=cart.filter(x=>x!==id);saveCart();if(editingProductId===id)cancelProductEdit();persistProducts();alert('محصول حذف شد.')}
+
+function renderOrders(){renderSupportAdmin();let list=orders();document.getElementById('orders').innerHTML=list.length?list.map(o=>`<div class="order"><b>سفارش ${o.id}</b><p>${o.name} — ${o.phone}</p><p>${o.items.join('، ')} | ${fa(o.total)} تومان</p><p>وضعیت: ${o.status}</p><img src="${o.receipt}"><label>کانفیگ مشتری</label><textarea id="cfg${o.id}" placeholder="کانفیگ اختصاصی این مشتری را وارد کنید">${o.config||''}</textarea><button onclick="sendConfig(${o.id})">ارسال کانفیگ برای مشتری</button> <button class="secondary" style="background:#9d3348;border-color:#b94a60" onclick="deleteOrder(${o.id})">حذف سفارش</button></div>`).join(''):'هنوز سفارشی ثبت نشده است'}
+
+
+function deleteOrder(id){
+ const list=orders();
+ const order=list.find(o=>o.id===id);
+ if(!order)return;
+ if(!confirm(`سفارش ${id} حذف شود؟ این کار قابل بازگشت نیست.`))return;
+ localStorage.setItem('v2orders',JSON.stringify(list.filter(o=>o.id!==id)));
+ renderOrders();
+ alert('سفارش حذف شد.');
+}
+
+function supportMessages(){return JSON.parse(localStorage.getItem('v2support')||'[]')}
+function sendSupport(){
+ const name=document.getElementById('supportname').value.trim(), phone=document.getElementById('supportphone').value.trim(), msg=document.getElementById('supportmessage').value.trim(), topic=document.getElementById('supporttopic').value;
+ if(!name||!/^09\d{9}$/.test(phone)||!msg)return alert('نام، شماره موبایل معتبر و متن پیام را وارد کن');
+ const list=supportMessages();list.push({id:Date.now(),name,phone,topic,msg,reply:'',date:new Date().toLocaleString('fa-IR')});
+ localStorage.setItem('v2support',JSON.stringify(list));document.getElementById('supportmessage').value='';alert('پیام ثبت شد.');document.getElementById('supportlookup').value=phone;loadSupport();
+}
+function loadSupport(){
+ const phone=document.getElementById('supportlookup').value.trim(), out=document.getElementById('supportthread');
+ if(!/^09\d{9}$/.test(phone)){out.innerHTML='<p class="muted">شماره موبایل معتبر وارد کن.</p>';return}
+ const mine=supportMessages().filter(m=>m.phone===phone);
+ out.innerHTML=mine.length?mine.map(m=>`<div class="order"><small class="muted">${m.date} — ${m.topic}</small><p><b>شما:</b> ${m.msg}</p><p><b>پشتیبانی:</b> ${m.reply||'در انتظار پاسخ مدیریت'}</p></div>`).join(''):'پیامی ثبت نشده است';
+}
+function renderSupportAdmin(){
+ const list=supportMessages();
+ document.getElementById('supportadmin').innerHTML=list.length?list.map(m=>`<div class="order"><b>${m.name} — ${m.phone}</b><p>${m.topic}</p><p>${m.msg}</p><label>پاسخ مدیر</label><textarea id="reply${m.id}" rows="2">${m.reply||''}</textarea><button onclick="replySupport(${m.id})">ثبت پاسخ</button></div>`).join(''):'پیامی وجود ندارد';
+}
+function replySupport(id){
+ const list=supportMessages(), m=list.find(x=>x.id===id);m.reply=document.getElementById('reply'+id).value.trim();
+ localStorage.setItem('v2support',JSON.stringify(list));renderSupportAdmin();alert('پاسخ ثبت شد.');
+}
+
+function trackOrders(){
+ const phoneValue=document.getElementById('trackphone').value.trim();
+ const out=document.getElementById('trackingresults');
+ if(!/^09\d{9}$/.test(phoneValue)){out.innerHTML='<p class="muted">شماره موبایل معتبر وارد کن.</p>';return}
+ const mine=orders().filter(o=>o.phone===phoneValue).sort((a,b)=>b.id-a.id);
+ if(!mine.length){out.innerHTML='<p class="muted">سفارشی با این شماره پیدا نشد.</p>';return}
+ out.innerHTML=mine.map(o=>`<div class="order"><b>سفارش ${fa(o.id)}</b><p>محصول: ${o.items.join('، ')}</p><p>مبلغ: ${fa(o.total)} تومان</p><p>وضعیت: <b>${o.status}</b></p>${o.config?`<div class="notice">کانفیگ شما توسط مدیریت ارسال شد. از کادر زیر کپی و در برنامه خود وارد کنید.</div><label>کانفیگ اختصاصی شما</label><textarea id="customerconfig${o.id}" readonly rows="5">${o.config}</textarea><button onclick="copyConfig(${o.id})">کپی کانفیگ</button>`:'<p class="muted">سفارش ثبت شده است. پس از بررسی پرداخت، کانفیگ در همین بخش قرار می‌گیرد.</p>'}</div>`).join('');
+}
+
+function sendConfig(id){let list=orders(),o=list.find(x=>x.id===id);if(!o)return;const value=document.getElementById('cfg'+id).value.trim();if(!value)return alert('اول کانفیگ مشتری را وارد کن');o.status='کانفیگ برای مشتری ارسال شد';o.config=value;o.configSent=true;o.configSentAt=new Date().toLocaleString('fa-IR');localStorage.setItem('v2orders',JSON.stringify(list));renderOrders();alert('کانفیگ در بخش پیگیری سفارش مشتری ثبت شد.')}
+function copyConfig(id){const el=document.getElementById('customerconfig'+id);if(!el)return;el.select();el.setSelectionRange(0,el.value.length);if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(el.value).then(()=>alert('کانفیگ کپی شد.')).catch(()=>alert('متن کانفیگ را انتخاب و کپی کن.'));}else{try{document.execCommand('copy');alert('کانفیگ کپی شد.')}catch(e){alert('متن کانفیگ را انتخاب و کپی کن.')}}}
+renderProducts();saveCart();document.getElementById('cardnumber').textContent=localStorage.getItem('v2card')||'شماره کارت توسط مدیریت وارد می‌شود';document.getElementById('cardholder').textContent=localStorage.getItem('v2cardname')||'نام صاحب کارت توسط مدیریت وارد می‌شود';
+// ورود نمایشی مدیر از مسیر اختصاصی؛ در منوی مشتری نمایش داده نمی‌شود.
+if(location.hash==='#admin') show('admin');
+window.addEventListener('hashchange',()=>{if(location.hash==='#admin')show('admin');else show('shop')});
+</script>
+</body></html>
